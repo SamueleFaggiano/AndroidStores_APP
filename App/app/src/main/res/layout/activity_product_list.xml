@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    tools:context=".ProductListActivity"
+    android:background="#EDEDED">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/MenuStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 2/3: Seleziona i prodotti"
+            android:layout_marginLeft="25dp"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="25dp"
+            android:textSize="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_buy"
+        android:layout_below="@+id/search_products"
+        android:text="CONFERMA\nPRODOTTI"
+        android:layout_alignRight="@id/toolbar_products"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/search_icon"
+        android:src="@drawable/search_icon"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/toolbar_products"
+        android:layout_alignBottom="@+id/search_products"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Scrivi qui per cercare un prodotto..."
+        android:id="@+id/search_products"
+        android:textSize="20dp"
+        android:maxLength="15"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbar_products"
+        android:layout_toRightOf="@+id/search_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Totale spesa: 0€"
+        android:id="@+id/total_expense"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@id/search_icon"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_minExp"
+        android:text="Spesa minima di 25€."
+        android:layout_gravity="left"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        android:textSize="7sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@id/total_expense"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vai alla tua lista"
+        android:id="@+id/list_expense"
+        android:layout_marginTop="10dp"
+        android:textColor="#0027FF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/info_minExp"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_mylist"
+        android:text="Clicca qui per vedere i prodotti selezionati"
+        android:layout_gravity="left"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        android:textSize="7sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_below="@+id/list_expense"
+        android:layout_marginLeft="10sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/info_mylist"
+        android:background="@color/common_google_signin_btn_text_dark_pressed"/>
+
+</RelativeLayout>

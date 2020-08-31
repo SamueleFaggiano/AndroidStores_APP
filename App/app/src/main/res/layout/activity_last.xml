@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LastActivity"
+    android:background="@drawable/bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_products_mylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/MenuStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congratulazioni!"
+            android:layout_marginLeft="25dp"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="25dp"
+            android:textSize="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="80dp"
+        android:id="@+id/last_image"
+        android:src="@drawable/brand"
+        android:layout_marginTop="50sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/last_image"
+        android:layout_marginTop="-40dp"
+        android:gravity="center_horizontal"
+        android:text="ORDINE COMPLETATO!\n\nSe vuoi puoi ordinare negli altri negozi e aggiungere altri prodotti a questo ordine...\nA più tardi!"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

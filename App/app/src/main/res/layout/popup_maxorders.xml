@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/customborder"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/workinprogress"
+        android:src="@drawable/popupimage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/workinprogress"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:padding="15dp"
+        android:text="MASSIMO NUMERO DI ORDINI GIORNALIERI RAGGIUNTO!\n\nQuesto servizio è in fase di sperimentazione. Purtroppo, sono disponibili un numero limitato di prenotazioni. Stiamo lavorando per poter garantire più prenotazioni e ampliare le fasce orarie di consegna.\nRiprova domani :) Grazie!"/>
+
+</RelativeLayout>

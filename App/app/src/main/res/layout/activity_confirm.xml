@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".ConfirmActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/MenuStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 3/3: Ordina!"
+            android:layout_marginLeft="25dp"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="25dp"
+            android:textSize="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/realname"
+            android:layout_margin="10dp"
+            app:met_floatingLabel="normal"
+            android:hint="Nome sul campanello"
+            android:maxLength="15"
+            android:layout_below="@+id/toolbar_confirm"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:layout_margin="10dp"
+        app:met_floatingLabel="normal"
+        android:hint="Cellulare"
+        android:maxLength="15"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/realname"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:layout_margin="10dp"
+        app:met_floatingLabel="normal"
+        android:hint="Indirizzo"
+        android:maxLength="25"
+        android:layout_below="@id/phone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/warning_address"
+        android:textSize="15sp"
+        android:textColor="#F80404"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:text=""
+        android:layout_below="@id/address"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delivery_hour"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:padding="15dp"
+        android:text="Ora di consegna: "
+        android:layout_below="@id/warning_address"/>
+
+    <Spinner
+        android:id="@+id/spinner_hour"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20sp"
+        android:layout_below="@+id/delivery_hour"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="ORDINA SPESA"
+        android:id="@+id/btn_done"
+        android:layout_alignBottom="@+id/spinner_hour"
+        android:layout_toRightOf="@+id/spinner_hour"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"/>
+
+</RelativeLayout>

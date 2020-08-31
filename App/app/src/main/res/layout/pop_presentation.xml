@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/customborder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/product_price2"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/product_name2"
+            android:id="@+id/product_image2"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 - Descrizione"
+            android:id="@+id/text_description"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="description"
+            android:id="@+id/product_name2"
+            android:layout_below="@+id/text_description"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 - Prezzo: "
+            android:layout_below="@+id/product_name2"
+            android:layout_marginTop="30dp"
+            android:id="@+id/euro"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            android:id="@+id/product_price2"
+            android:layout_toRightOf="@id/euro"
+            android:layout_toEndOf="@+id/euro"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_alignBaseline="@+id/euro"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-xx%"
+            android:id="@+id/receive_discount2"
+            android:layout_below="@+id/euro"
+            android:layout_alignLeft="@+id/product_price2"
+            android:textSize="15sp"
+            android:textColor="#25DC05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="disc_price"
+            android:id="@+id/discounted_price2"
+            android:layout_below="@+id/total_cost"
+            android:layout_alignLeft="@id/total_cost"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/number_items"
+            android:text="3 - Pezzi:"
+            android:layout_below="@+id/receive_discount2"
+            android:layout_marginTop="20sp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_cost"
+            android:text="4 - Paghi:"
+            android:layout_below="@+id/spinner_quantity"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinner_quantity"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/number_items"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="AGGIUNGI AL CARRELLO"
+            android:id="@+id/add_to_cart"
+            android:layout_below="@+id/product_image2"
+            android:layout_marginTop="15dp"
+            android:layout_alignRight="@+id/product_image2"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
